@@ -4,7 +4,8 @@ fun main(args: Array<String>) {
     println(isPalindrome(-121))
     println(isPalindrome(1112111))
     println(isPalindrome(1))*/
-    println(isPalindrome(10022201))
+    //println(isPalindrome(10022201))
+    println(5423 % 234)
 }
 
 fun isPalindrome(x: Int): Boolean {

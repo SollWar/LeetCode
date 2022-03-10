@@ -1,11 +1,13 @@
 package binarySearch
 
 fun main() {
-    println(search(intArrayOf(-1, 0, 3, 5, 9, 12), 2))
+    println(search(intArrayOf(-1, 0, 3, 5, 9, 12), 9))
 }
 
 /**
  * Бинарный поиск в числовом массиве
+ * Левый бинпоиск - первое подходящее значение
+ * Правый бинпоиск - последнее подходящее значение
  */
 fun search(nums: IntArray, target: Int): Int {
 
@@ -18,13 +20,11 @@ fun search(nums: IntArray, target: Int): Int {
         if (nums[center] > target) {
             right = center    // Левый бинарный поиск
             // left = center  // Правый бинарный поиск
-        } else if (nums[center] < target){
+        } else {
             left = center + 1      // Левый бинарный поиск
             // right = center - 1  // Правый бинарный поиск
-        } else {
-            return center
         }
     }
 
-    return -1
+    return left
 }
